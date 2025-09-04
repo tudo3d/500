@@ -6,11 +6,11 @@ set -e -u -o pipefail
 ## but this has been reliable for me so far…
 sleep 10
 
-outdir=/home/biqu/klipper_config/input_shaper
+outdir=/home/biqu/printer_data/config/input_shaper
 if [ ! -d "${outdir}" ]; then
     mkdir "${outdir}"
 fi
 
-~/klipper/scripts/graph_accelerometer.py \
+~/biqu/printer_data/config/scripts/graph_accelerometer.py 
     -c /tmp/raw_data_axis*_belt-tension-*.csv \
     -o "${outdir}/belt-tension-resonances-$( date +'%Y-%m-%d-%H%M%S' ).png"
