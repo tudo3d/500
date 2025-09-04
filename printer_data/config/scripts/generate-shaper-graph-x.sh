@@ -1,4 +1,3 @@
-# salve como generate-shaper-graph-y.sh (ou o nome que preferir)
 cat > /home/biqu/printer_data/config/scripts/generate-shaper-graph-y.sh <<'EOF'
 #!/bin/bash
 NEWY=$(ls -Art /tmp/resonances_y_*.csv | tail -n 1)
